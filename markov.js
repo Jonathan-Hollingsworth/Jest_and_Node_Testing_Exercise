@@ -34,7 +34,6 @@ class MarkovMachine {
         }
       }
     }
-    return this.chains
   }
 
 
