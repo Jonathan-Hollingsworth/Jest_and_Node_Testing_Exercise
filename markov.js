@@ -33,7 +33,6 @@ class MarkovMachine {
           this.chains[word] = [this.words[i + 1]]
         }
       }
-      
     }
     return this.chains
   }
@@ -42,6 +41,18 @@ class MarkovMachine {
   /** return random text from chains */
 
   makeText(numWords = 100) {
-    // TODO
+    let word = this.words[Math.floor(Math.random() * this.words.length)]
+    let text = word
+    for (let i = 1; i < numWords-1; i++) {
+      word = this.chains[word][Math.floor(Math.random() * this.chains[word].length)]
+      if (word === null) {
+        return text
+      } else {
+        text += ` ${word}`
+      }
+    }
+    return text
   }
 }
+
+module.exports = { MarkovMachine }
