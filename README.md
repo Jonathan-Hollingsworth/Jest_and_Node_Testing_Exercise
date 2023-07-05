@@ -5,7 +5,7 @@ This system creates psudeo-randomly generated text using a 'Markov Machine' and 
 ## Using The Machine:
 
 In order to use the machine you will need to open the terminal and use one to the following commands:  
-1. `node makeText.js file path/to/file`
+1. `node makeText.js file path/to/file.txt`
 2. `node makeText.js url http://url.txt` (Url must end in '.txt')
 
 ## markov.test.js
